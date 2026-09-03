@@ -1,0 +1,4 @@
+interface:
+  display_name: "Walmart Marketplace API Guide"
+  short_description: "Answer Walmart Marketplace API structure questions from bundled references first."
+  default_prompt: "Use $walmart-marketplace-api-guide to confirm this Walmart Marketplace API structure from references/api/ first."

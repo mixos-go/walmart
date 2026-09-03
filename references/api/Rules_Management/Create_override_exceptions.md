@@ -1,0 +1,40 @@
+---
+title: Create_override_exceptions
+category: Rules_Management
+api_name: Create_override_exceptions
+method: POST
+path: /v3/rules/exceptions
+---
+
+**Category:** Rules_Management
+**API:** Create_override_exceptions
+
+**Method:** POST
+**HTTP Path:** https://marketplace.walmartapis.com/v3/rules/exceptions
+
+## API Description
+Create override exceptions
+
+## Request Parameters
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| Authorization (header) | string | Yes | Basic authorization header. Base 64 encodes the Client ID and Client Secret retrieved in step two of the integration steps. |
+| WM_SEC.ACCESS_TOKEN (header) | string | Yes | The access token retrieved in the Token API call |
+| WM_CONSUMER.CHANNEL.TYPE (header) | string | No | A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding |
+| WM_QOS.CORRELATION_ID (header) | string | Yes | A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID |
+| WM_SVC.NAME (header) | string | Yes | Walmart Service Name |
+
+## Request Body
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| ruleHeader | object | No |  |
+| ruleHeader.version | string | No |  |
+| rules | object | No |  |
+| rules.skus | array<object> | No |  |
+| rules.skus.sku | string | No | An arbitrary alphanumeric unique ID, specified by the seller, which identifies each item. This will be used by the seller in the XSD file to refer to each item. Special characters in the sku needing encoding are: ':', '/', '?', '#', '[', ']', '@', '!', '$', '&', "'", '(', ')', '*', '+', ',', ';', '= |
+
+## Response
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| feedId | string | No | A unique ID, returned from the Create Override Exception API, used for tracking a feed file |
+| status | string | No | status |
