@@ -1,6 +1,6 @@
 # walmart — Walmart Marketplace API skill
 
-Skill mandiri ala pola `@tts-open-toolkit`/`tts-openapi-*` dari TikTok Shop, untuk
+Skill mandiri (standalone) untuk
 Walmart Marketplace API. Struktur identik dengan skill toolkit:
 
 ```
